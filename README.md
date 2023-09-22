@@ -39,12 +39,22 @@ git remote
 
 #### Nota: recuerda que esto solo elimina la referencia de seguimiento en tu repositorio local. La rama remota seguira existiendo en el repositorio de GitHub.
 
-4. Adicionalmente, en tu configuracion de VSCode ajusta Tab Size en 2.
-5. En el settings.json, asegurate de tener esto:
+4. Para eliminar el historial de commits y sus respectivos logs, en la raiz del proyecto:
+##### En Linux:
+```console
+rm -rf .git
+```
+Hecho esto, puedes re-inicializar el repositorio:
+```console
+git init
+```
+
+5. Adicionalmente, en tu configuracion de VSCode ajusta Tab Size en 2.
+6. En el settings.json, asegurate de tener esto:
 ```console
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "editor.tabSize": 2
 ```
-6. Por ultimo borre el contenido del archivo README.md.
+7. Por ultimo borre el contenido del archivo README.md.
